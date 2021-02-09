@@ -1,3 +1,3 @@
-![](brand.png)
+![](doc/brand.png)
 
 # The **µnix** Operating System

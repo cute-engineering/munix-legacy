@@ -1,0 +1,6 @@
+[book]
+authors = ["The µnix Contributors"]
+language = "en"
+multilingual = false
+src = "."
+title = "The µnix Operating System"
