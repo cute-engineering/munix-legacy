@@ -1,5 +1,5 @@
-#ifndef KERNEL_IPC_H
-#define KERNEL_IPC_H
+#ifndef _KERNEL_IPC_H
+#define _KERNEL_IPC_H
 
 #include <common/config.h>
 #include <common/message.h>
@@ -18,4 +18,4 @@ struct ipc_duplex
 	struct ipc_channel client;
 };
 
-#endif
+#endif /*_KERNEL_IPC_H */

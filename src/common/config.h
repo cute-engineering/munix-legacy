@@ -1,5 +1,5 @@
-#ifndef COMMON_CONFIG_H
-#define COMMON_CONFIG_H
+#ifndef _COMMON_CONFIG_H
+#define _COMMON_CONFIG_H
 
 #define CONFIG_IPC_CHANNEL_COUNT  (16)
 #define CONFIG_IPC_CHANNEL_LENGTH (16)
@@ -7,4 +7,4 @@
 
 #define CONFIG_TASK_NAME_SIZE (16)
 
-#endif
+#endif /* !_COMMON_CONFIG_H */

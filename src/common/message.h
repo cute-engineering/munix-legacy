@@ -1,14 +1,13 @@
-#ifndef COMMON_MESSAGE_H
-#define COMMON_MESSAGE_H
+#ifndef _COMMON_MESSAGE_H
+#define _COMMON_MESSAGE_H
 
 #include <common/config.h>
 
 enum message_type
 {
-	MSG_INVALID = 0,
+	MSG_INVALID,
 	MSG_ACK,
 	MSG_ERROR,
-
 	MSG_OPEN,
 	MSG_CLOSE,
 	MSG_READ,
@@ -23,4 +22,4 @@ struct message
 	char payload[CONFIG_IPC_MESSAGE_SIZE - sizeof(enum message_type)];
 };
 
-#endif
+#endif /* !_COMMON_MESSAGE_H */
