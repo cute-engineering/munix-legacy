@@ -6,7 +6,7 @@
 
 # The **µnix** Operating System
 
-"µnix", "munix" or, "micro unix" aims to be a micro kernel based operating system targeting the Respberry Pi Pico.
+"µnix", "munix" or, "micro unix" aims to be a micro kernel based operating system targeting the Raspberry Pi Pico.
 
 "µnix" is an execise in minimalism to see if micro kernels are viable on such constrain systems.
 
