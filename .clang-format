@@ -1,0 +1,31 @@
+AlignTrailingComments: true
+AlwaysBreakAfterReturnType: All
+AlignConsecutiveMacros: true
+BreakBeforeBraces: Mozilla
+ColumnLimit: 80
+ContinuationIndentWidth: 4
+Cpp11BracedListStyle: false
+FixNamespaceComments: true
+IndentCaseLabels: false
+IndentWidth: 4
+SortIncludes: true
+SpacesBeforeTrailingComments: 4
+TabWidth: 4
+UseTab: Always
+SortIncludes: true
+IncludeCategories:
+ - Regex: '^<config\.h>'
+   Priority: 10
+   SortPriority: 10
+ - Regex: '^<common.*/'
+   Priority: 20
+   SortPriority: 20
+ - Regex: '^<lib.*/'
+   Priority: 30
+   SortPriority: 30
+ - Regex: '^<kernel.*/'
+   Priority: 40
+   SortPriority: 40
+ - Regex: '^\".*\.h\"'
+   Priority: 50
+   SortPriority: 50
