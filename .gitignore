@@ -53,5 +53,4 @@ dkms.conf
 
 # mdbook
 book
-adr
 *.html

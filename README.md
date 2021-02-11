@@ -1,8 +1,12 @@
-![](doc/brand.png)
+<p align="center">
+<img height="96" src="doc/brand.png"/>
+</p>
+
+</br>
 
 # The **µnix** Operating System
 
-"µnix", "munix" or, "micro unix" aime to be a micro kernel based operating system targeting in the first time the Respberry Pi Pico.
+"µnix", "munix" or, "micro unix" aims to be a micro kernel based operating system targeting in the first time the Respberry Pi Pico.
 
 "µnix" is an execise in minimalism to see if micro kernels are viable on such constrain systems.
 
