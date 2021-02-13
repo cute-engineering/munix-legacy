@@ -10,7 +10,7 @@
 
 "µnix" is an execise in minimalism to see if micro kernels are viable on such constrain systems.
 
-We want "µnix" to feel like any regulare unix-like operating system.
+We want "µnix" to feel like any regular unix-like operating system.
 
 # Contributing
 
