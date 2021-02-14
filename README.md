@@ -1,7 +1,12 @@
+</br>
+</br>
+</br>
+</br>
 <p align="center">
-<img height="96" src="doc/brand.png"/>
+<img height="128" src="doc/brand.png"/>
 </p>
-
+</br>
+</br>
 </br>
 
 # The **µnix** Operating System
