@@ -54,3 +54,4 @@ dkms.conf
 # mdbook
 book
 *.html
+bin

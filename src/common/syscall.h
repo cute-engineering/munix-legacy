@@ -6,6 +6,10 @@ enum syscall
 	SYS_INVALID,
 	SYS_SEND,
 	SYS_RECEIVE,
+	SYS_SLEEP,
+	SYS_WAIT,
+	SYS_KILL,
+	SYS_SPAWN,
 };
 
 #endif /* _COMMON_SYSCALL_H */
