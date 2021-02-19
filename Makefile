@@ -3,8 +3,10 @@
 
 GUARD=@mkdir -p $(@D)
 
-CC=arm-none-eabi-gcc
-LD=arm-none-eabi-ld
+CC?=gcc
+
+TARGET_CC?=arm-none-eabi-gcc
+TARGET_LD?=arm-none-eabi-ld
 
 SRCDIR=$(shell pwd)/src
 BINDIR=$(shell pwd)/bin
