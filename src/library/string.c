@@ -54,3 +54,15 @@ memset(void *s, int c, size_t n)
 	}
 	return s;
 }
+
+void *
+memcpy(void *dest, const void *src, size_t n)
+{
+	const unsigned char *c_src = (const unsigned char *)src;
+	unsigned char *c_dest = (unsigned char *)dest;
+
+	for (int i = 0; i < n; i++) {
+		c_dest[i] = c_src[i];
+	}
+	return dest;
+}
