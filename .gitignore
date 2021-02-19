@@ -60,5 +60,6 @@ bin
 
 .config
 .config.old
-include/config
-include/generated
+
+# python
+.env/
