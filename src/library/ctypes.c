@@ -3,9 +3,12 @@
 int
 isspace(int c)
 {
-	if (c == ' ' || c == '\n' || c == '\r' || c == '\t' || c == '\v') {
+	if (c == ' ' || c == '\n' || c == '\r' || c == '\t' || c == '\v')
+	{
 		return 1;
-	} else {
+	}
+	else
+	{
 		return 0;
 	}
 }
@@ -13,13 +16,16 @@ isspace(int c)
 int
 isalnum(int c)
 {
-	if (c <= 'z' && c >= 'a') {
+	if (c <= 'z' && c >= 'a')
+	{
 		return 1;
 	}
-	if (c <= 'Z' && c >= 'A') {
+	if (c <= 'Z' && c >= 'A')
+	{
 		return 1;
 	}
-	if (c <= '9' && c >= '0') {
+	if (c <= '9' && c >= '0')
+	{
 		return 1;
 	}
 	return 0;
@@ -28,7 +34,8 @@ isalnum(int c)
 int
 isdigit(int c)
 {
-	if (c <= '9' && c >= '0') {
+	if (c <= '9' && c >= '0')
+	{
 		return 1;
 	}
 	return 0;
@@ -37,10 +44,12 @@ isdigit(int c)
 int
 isalpha(int c)
 {
-	if (c <= 'z' && c >= 'a') {
+	if (c <= 'z' && c >= 'a')
+	{
 		return 1;
 	}
-	if (c <= 'Z' && c >= 'A') {
+	if (c <= 'Z' && c >= 'A')
+	{
 		return 1;
 	}
 	return 0;
@@ -49,7 +58,8 @@ isalpha(int c)
 int
 to_lower(int c)
 {
-	if (c >= 'A' && c <= 'Z') {
+	if (c >= 'A' && c <= 'Z')
+	{
 		c -= 'A';
 		c += 'a';
 	}
@@ -59,7 +69,8 @@ to_lower(int c)
 int
 to_upper(int c)
 {
-	if (c >= 'a' && c <= 'z') {
+	if (c >= 'a' && c <= 'z')
+	{
 		c -= 'a';
 		c += 'A';
 	}
