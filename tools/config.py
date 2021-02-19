@@ -17,10 +17,15 @@ def generate_header(dest):
         f.write('\n#endif /* !_COMMON_CONFIG_H */\n')
 
 
+def defconfig():
+    kconfig.write_config()
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--genheader', action='store', default=None)
     parser.add_argument('--menuconfig', action='store_true')
+    parser.add_argument('--defconfig', action='store_true')
     args = parser.parse_args()
 
     if args.genheader is not None:
@@ -28,3 +33,6 @@ if __name__ == '__main__':
 
     if args.menuconfig:
         menuconfig.menuconfig(kconfig)
+
+    if args.defconfig:
+        defconfig()

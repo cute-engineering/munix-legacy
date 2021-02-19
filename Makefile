@@ -35,8 +35,11 @@ all: $(KERNEL_BIN)
 menuconfig:
 	$(CONF) --menuconfig
 
-.PHONY: config
-config:
+.PHONY: defconfig
+defconfig:
+	$(CONF) --defconfig
+
+src/common/config.h: .config
 	$(CONF) --genheader src/common/config.h
 
 .PHONY: book
