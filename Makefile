@@ -3,15 +3,6 @@
 
 GUARD=@mkdir -p $(@D)
 
-CC?=gcc
-
-TARGET_CC?=arm-none-eabi-gcc
-TARGET_LD?=arm-none-eabi-ld
-
-SRCDIR=$(shell pwd)/src
-TOOLDIR=$(shell pwd)/tools
-BINDIR=$(shell pwd)/bin
-
 WARNINGS= \
 	-Wall \
 	-Wextra \
@@ -25,11 +16,24 @@ TARGET = \
 	-mcpu=cortex-m0plus \
 	-mthumb
 
+CC?=gcc
+CXX?=g++
+
+CFLAGS += $(INCLUDES)
+CXXFLAGS += $(INCLUDES)
+
+TARGET_CC?=arm-none-eabi-gcc
+TARGET_LD?=arm-none-eabi-ld
+
+SRCDIR=$(shell pwd)/src
+TOOLDIR=$(shell pwd)/tools
+BINDIR=$(shell pwd)/bin
+
 include $(wildcard $(TOOLDIR)/.build.mk)
 include $(wildcard src/*/.build.mk)
 
 .PHONY: all
-all: $(KERNEL_BIN)
+all: $(KERNEL_UF2)
 
 .PHONY: menuconfig
 menuconfig:
