@@ -43,3 +43,14 @@ strncmp(const char *s1, const char *s2, size_t maxlen)
 	}
 	return (int)s1[idx] - (int)s2[idx];
 }
+
+void *
+memset(void *s, int c, size_t n)
+{
+
+	unsigned char *v = (unsigned char *)s;
+	for (int i = 0; i < n; i++) {
+		v[i] = c;
+	}
+	return s;
+}
