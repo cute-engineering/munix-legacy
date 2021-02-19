@@ -1,0 +1,25 @@
+menu "IPC option"
+config ICP_CHANNEL_COUNT
+int
+default 16
+prompt "IPC channel count"
+
+config IPC_CHANNEL_LENGTH
+int
+default 16
+prompt "IPC channel length"
+
+config IPC_MESSAGE_SIZE
+int
+default 32
+prompt "IPC message size"
+
+endmenu
+
+menu "Task option"
+config TASK_NAME_SIZE
+int
+default 16
+prompt "Task name size"
+
+endmenu

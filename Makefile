@@ -8,6 +8,9 @@ CC?=gcc
 TARGET_CC?=arm-none-eabi-gcc
 TARGET_LD?=arm-none-eabi-ld
 
+MCONF=kconfig-mconf
+CONF=kconfig-conf
+
 SRCDIR=$(shell pwd)/src
 BINDIR=$(shell pwd)/bin
 
@@ -18,6 +21,7 @@ WARNINGS= \
 
 INCLUDES= \
 	-Isrc/
+	-Iinclude/
 
 TARGET = \
 	-march=armv6-m \
@@ -28,6 +32,16 @@ include $(wildcard src/*/.build.mk)
 
 .PHONY: all
 all: $(KERNEL_BIN)
+
+.PHONY: menuconfig
+menuconfig:
+	$(MCONF) Kconfig
+
+.PHONY: config
+config:
+	mkdir -p include/
+	mkdir -p include/config include/generated
+	$(CONF) --silentoldconfig Kconfig
 
 .PHONY: book
 book:
