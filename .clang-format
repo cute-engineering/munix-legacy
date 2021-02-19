@@ -1,7 +1,7 @@
 AlignTrailingComments: true
 AlwaysBreakAfterReturnType: All
 AlignConsecutiveMacros: true
-BreakBeforeBraces: Mozilla
+BreakBeforeBraces: Allman
 ColumnLimit: 80
 ContinuationIndentWidth: 4
 Cpp11BracedListStyle: false
