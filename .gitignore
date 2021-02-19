@@ -55,3 +55,10 @@ dkms.conf
 book
 *.html
 bin
+
+# kconfig
+
+.config
+.config.old
+include/config
+include/generated
