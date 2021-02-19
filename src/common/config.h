@@ -1,6 +1,9 @@
 #ifndef _COMMON_CONFIG_H
 #define _COMMON_CONFIG_H
 
-#include <generated/autoconf.h>
+#define CONFIG_ICP_CHANNEL_COUNT 16
+#define CONFIG_IPC_CHANNEL_LENGTH 16
+#define CONFIG_IPC_MESSAGE_SIZE 32
+#define CONFIG_TASK_NAME_SIZE 16
 
 #endif /* !_COMMON_CONFIG_H */
