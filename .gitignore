@@ -64,3 +64,6 @@ src/common/config.h
 
 # python
 .env/
+
+# visual studio code
+.vscode/
