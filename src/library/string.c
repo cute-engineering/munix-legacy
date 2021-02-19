@@ -10,6 +10,16 @@ strlen(const char *s)
 	return i;
 }
 
+size_t
+strnlen(const char *s, size_t maxlen)
+{
+	size_t i = 0;
+	while (s[i] != '\0' && i < maxlen) {
+		i++;
+	}
+	return i;
+}
+
 int
 strcmp(const char *s1, const char *s2)
 {
