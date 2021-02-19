@@ -1,6 +1,6 @@
-#ifndef _LIBRARY_SYSCALL_H
-#define _LIBRARY_SYSCALL_H
+#ifndef _MUNIX_LIBRARY_SYSCALL_H
+#define _MUNIX_LIBRARY_SYSCALL_H
 
 #include <common/syscall.h>
 
-#endif /*!_LIBRARY_SYSCALL_H */
+#endif /* !_MUNIX_LIBRARY_SYSCALL_H */

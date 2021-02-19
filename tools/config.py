@@ -11,10 +11,11 @@ kconfig = kconfiglib.Kconfig("Kconfig")
 def generate_header(dest):
     kconfig.load_config('.config')
     kconfig.write_autoconf(
-        dest, '#ifndef _COMMON_CONFIG_H\n#define _COMMON_CONFIG_H\n\n')
+        dest, '#ifndef _MUNIX_COMMON_CONFIG_H\n'
+              '#define _MUNIX_COMMON_CONFIG_H\n\n')
     # a bit hacky but there is no other way and I really hate '#pragma once'
     with open(dest, 'a') as f:
-        f.write('\n#endif /* !_COMMON_CONFIG_H */\n')
+        f.write('\n#endif /* !_MUNIX_COMMON_CONFIG_H */\n')
 
 
 def defconfig():

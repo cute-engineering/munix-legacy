@@ -1,5 +1,5 @@
-#ifndef _COMMON_SYSCALL_H
-#define _COMMON_SYSCALL_H
+#ifndef _MUNIX_COMMON_SYSCALL_H
+#define _MUNIX_COMMON_SYSCALL_H
 
 enum syscall
 {
@@ -12,4 +12,4 @@ enum syscall
 	SYS_SPAWN,
 };
 
-#endif /* _COMMON_SYSCALL_H */
+#endif /* !_MUNIX_COMMON_SYSCALL_H */

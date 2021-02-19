@@ -1,5 +1,5 @@
-#ifndef _COMMON_MESSAGE_H
-#define _COMMON_MESSAGE_H
+#ifndef _MUNIX_COMMON_MESSAGE_H
+#define _MUNIX_COMMON_MESSAGE_H
 
 #include <common/config.h>
 

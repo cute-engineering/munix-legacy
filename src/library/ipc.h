@@ -1,4 +1,4 @@
-#ifndef _LIBRARY_IPC_H
-#define _LIBRARY_IPC_H
+#ifndef _MUNIX_LIBRARY_IPC_H
+#define _MUNIX_LIBRARY_IPC_H
 
-#endif /*!_LIBRARY_IPC_H */
+#endif /*!_MUNIX_LIBRARY_IPC_H */

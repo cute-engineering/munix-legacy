@@ -1,5 +1,5 @@
-#ifndef _KERNEL_TASK_H
-#define _KERNEL_TASK_H
+#ifndef _MUNIX_KERNEL_TASK_H
+#define _MUNIX_KERNEL_TASK_H
 
 #include <common/config.h>
 
@@ -9,4 +9,4 @@ struct task
 	char name[CONFIG_TASK_NAME_SIZE];
 };
 
-#endif /* !_KERNEL_TASK_H */
+#endif /* !_MUNIX_KERNEL_TASK_H */

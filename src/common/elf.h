@@ -1,5 +1,5 @@
-#ifndef _COMMON_ELF_H
-#define _COMMON_ELF_H
+#ifndef _MUNIX_COMMON_ELF_H
+#define _MUNIX_COMMON_ELF_H
 
 #include <stdint.h>
 
@@ -55,4 +55,4 @@ struct elf32_ph_entry
 };
 #pragma pack(pop)
 
-#endif
+#endif /* !_MUNIX_COMMON_ELF_H */
