@@ -8,9 +8,8 @@ CC?=gcc
 TARGET_CC?=arm-none-eabi-gcc
 TARGET_LD?=arm-none-eabi-ld
 
-CONF=tools/config.py
-
 SRCDIR=$(shell pwd)/src
+TOOLDIR=$(shell pwd)/tools
 BINDIR=$(shell pwd)/bin
 
 WARNINGS= \
@@ -26,6 +25,7 @@ TARGET = \
 	-mcpu=cortex-m0plus \
 	-mthumb
 
+include $(wildcard $(TOOLDIR)/.build.mk)
 include $(wildcard src/*/.build.mk)
 
 .PHONY: all
@@ -38,9 +38,6 @@ menuconfig:
 .PHONY: defconfig
 defconfig:
 	$(CONF) --defconfig
-
-src/common/config.h: .config
-	$(CONF) --genheader src/common/config.h
 
 .PHONY: book
 book:
