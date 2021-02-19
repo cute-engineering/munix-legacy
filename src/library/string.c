@@ -29,3 +29,17 @@ strcmp(const char *s1, const char *s2)
 	}
 	return (int)s1[idx] - (int)s2[idx];
 }
+
+int
+strncmp(const char *s1, const char *s2, size_t maxlen)
+{
+	size_t idx = 0;
+	while (s1[idx] == s2[idx] && s1[idx] && maxlen) {
+		idx++;
+		maxlen--;
+	}
+	if (maxlen == 0) {
+		return 0;
+	}
+	return (int)s1[idx] - (int)s2[idx];
+}
