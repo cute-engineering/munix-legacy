@@ -60,6 +60,7 @@ bin
 
 .config
 .config.old
+src/common/config.h
 
 # python
 .env/
