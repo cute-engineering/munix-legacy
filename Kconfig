@@ -1,5 +1,5 @@
 menu "IPC option"
-config ICP_CHANNEL_COUNT
+config IPC_CHANNEL_COUNT
 int
 default 16
 prompt "IPC channel count"
