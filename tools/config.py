@@ -18,6 +18,11 @@ def generate_header(dest):
         f.write('\n#endif /* !_MUNIX_COMMON_CONFIG_H */\n')
 
 
+def generate_make(dest):
+    kconfig.load_config('.config')
+    kconfig.write_config(dest)
+
+
 def defconfig():
     kconfig.write_config()
 
@@ -25,12 +30,16 @@ def defconfig():
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--genheader', action='store', default=None)
+    parser.add_argument('--genmake', action='store', default=None)
     parser.add_argument('--menuconfig', action='store_true')
     parser.add_argument('--defconfig', action='store_true')
     args = parser.parse_args()
 
     if args.genheader is not None:
         generate_header(args.genheader)
+
+    if args.genmake is not None:
+        generate_make(args.genmake)
 
     if args.menuconfig:
         menuconfig.menuconfig(kconfig)

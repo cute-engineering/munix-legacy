@@ -58,6 +58,7 @@ bin
 
 # kconfig
 
+.config.mk
 .config
 .config.old
 src/common/config.h

@@ -1,6 +1,8 @@
 .SUFFIXES:
 .DEFAULT_GOAL := all
 
+-include .config.mk
+
 GUARD=@mkdir -p $(@D)
 
 WARNINGS= \
@@ -30,18 +32,34 @@ TOOLDIR=$(shell pwd)/tools
 BINDIR=$(shell pwd)/bin
 
 include $(wildcard $(TOOLDIR)/.build.mk)
+
+.PHONY: menuconfig
+menuconfig:
+	$(CONF) --menuconfig
+	$(CONF) --genmake .config.mk
+
+.PHONY: defconfig
+defconfig:
+	$(CONF) --defconfig
+	$(CONF) --genmake .config.mk
+
+ifeq (, $(wildcard ./.config))
+
+.PHONY: all
+all:
+	@echo "Looks wike someone didn't wead the buiwd guide smh wU"
+	@echo "You need to wun 'make menuconfig' ow 'make defconfig' fiwst ÒwÓ"
+
+else
+
 include $(wildcard src/*/.build.mk)
 
 .PHONY: all
 all: $(KERNEL_UF2)
 
-.PHONY: menuconfig
-menuconfig:
-	$(CONF) --menuconfig
+-include $(shell find bin/ -name '*.d')
 
-.PHONY: defconfig
-defconfig:
-	$(CONF) --defconfig
+endif
 
 .PHONY: book
 book:
@@ -52,4 +70,7 @@ clean:
 	rm -rf bin
 	rm -rf book
 
--include $(shell find bin/ -name '*.d')
+.PHONY: distclean
+distclean: clean
+	rm .config
+	rm .config.mk
