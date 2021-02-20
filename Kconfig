@@ -1,3 +1,16 @@
+menu "Target option"
+    config TARGET_BOARD
+        string
+        default "pico"
+        prompt "Target board name"
+
+    config TARGET_ARCH
+        string
+        default "m0plus"
+        prompt "Target architecture name"
+
+endmenu
+
 menu "IPC option"
     config IPC_CHANNEL_COUNT
         int

@@ -29,7 +29,7 @@ TARGET_LD?=arm-none-eabi-ld
 
 SRCDIR=$(shell pwd)/src
 TOOLDIR=$(shell pwd)/tools
-BINDIR=$(shell pwd)/bin
+BINDIR=$(shell pwd)/bin/$(CONFIG_TARGET_ARCH)/$(CONFIG_TARGET_BOARD)
 
 include $(wildcard $(TOOLDIR)/.build.mk)
 
@@ -67,7 +67,7 @@ book:
 
 .PHONY: clean
 clean:
-	rm -rf bin
+	rm -rf $(BINDIR)
 	rm -rf book
 
 .PHONY: distclean
