@@ -1,0 +1,22 @@
+name: Check
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Install build dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install build-essential python3-pip
+        sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi
+        sudo pip install kconfiglib
+
+    - name: Generate config
+      run: make defconfig
+    
+    - name: Build
+      run: make all
