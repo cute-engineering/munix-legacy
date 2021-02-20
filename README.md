@@ -20,7 +20,7 @@ We want "µnix" to feel like any regular unix-like operating system.
 
 # Contributing
 
-The project is open to contribution but please note that architectural changes should go throught the [Architecture Decision Records Process](adr/ADR00-record-architecture-decisions.md)
+The project is open to contribution but please note that architectural changes should go throughout the [Architecture Decision Records Process](adr/ADR00-record-architecture-decisions.md)
 
 # License
 
