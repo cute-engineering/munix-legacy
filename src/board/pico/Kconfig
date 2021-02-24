@@ -1,0 +1,11 @@
+config BOARD_PICO
+    bool "Support Raspberry PI pico"
+    depends on ARCH_RP2040
+
+if BOARD_PICO
+
+    config TARGET_BOARD
+        string
+        default "pico"
+
+endif

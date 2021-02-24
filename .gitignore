@@ -60,7 +60,7 @@ bin
 
 .config.mk
 .config
-.config.old
+*.old
 src/common/config.h
 
 # python

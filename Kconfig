@@ -1,15 +1,7 @@
-menu "Target option"
-    config TARGET_BOARD
-        string
-        default "pico"
-        prompt "Target board name"
+mainmenu "Munix Configuration"
 
-    config TARGET_ARCH
-        string
-        default "m0plus"
-        prompt "Target architecture name"
-
-endmenu
+source "src/arch/Kconfig"
+source "src/board/Kconfig"
 
 menu "IPC option"
     config IPC_CHANNEL_COUNT

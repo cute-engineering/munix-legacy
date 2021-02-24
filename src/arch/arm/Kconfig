@@ -1,0 +1,23 @@
+menu "ARM architecture"
+    depends on ARM
+
+config TARGET_ARCH
+    string
+    default "arm"
+
+choice
+    prompt "Target select"
+    default ARCH_RP2040
+
+config ARCH_RP2040
+    bool "RP2040"
+
+config ARCH_BCM283X
+    bool "bcm283x"
+
+endchoice
+
+endmenu
+
+source "src/arch/arm/rp2040/Kconfig"
+source "src/arch/arm/bcm283x/Kconfig"

@@ -1,0 +1,7 @@
+if ARCH_BCM283X
+
+config TARGET_SOC
+    string
+    default "bcm283x"
+
+endif
