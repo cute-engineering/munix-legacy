@@ -1,0 +1,7 @@
+if ARCH_RP2040
+
+config TARGET_SOC
+    string
+    default "rp2040"
+
+endif

@@ -1,0 +1,11 @@
+config BOARD_RPIZERO
+    bool "Support Raspberry PI ZERO"
+    depends on ARCH_BCM283X
+
+if BOARD_RPIZERO
+
+    config TARGET_BOARD
+        string
+        default "rpizero"
+
+endif

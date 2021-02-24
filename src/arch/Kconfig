@@ -1,0 +1,10 @@
+choice
+    prompt "Architecture"
+    default ARM
+
+config ARM
+    bool "ARM architecture"
+
+endchoice
+
+source "src/arch/arm/Kconfig"
