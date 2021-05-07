@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "common/elf.h"
-#include "common/uf2.h"
+#include "library/uf2/uf2.h"
 
 typedef unsigned int uint;
 
