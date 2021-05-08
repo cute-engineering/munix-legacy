@@ -1,15 +1,14 @@
 </br>
 </br>
 </br>
-</br>
 <p align="center">
-<img height="128" src="brand/cute-light.png"/>
+<img height="128" src="brand/think-light.png"/>
 </p>
-</br>
 </br>
 </br>
 
 # The **µnix** Operating System
+
 [![GitHub issues](https://img.shields.io/github/issues/sleepy-monax/munix)](https://github.com/sleepy-monax/munix/issues) [![GitHub forks](https://img.shields.io/github/forks/sleepy-monax/munix)](https://github.com/sleepy-monax/munix/network) [![GitHub stars](https://img.shields.io/github/stars/sleepy-monax/munix)](https://github.com/sleepy-monax/munix/stargazers) [![GitHub license](https://img.shields.io/github/license/sleepy-monax/munix)](https://github.com/sleepy-monax/munix/blob/main/LICENSE.md)
 
 "µnix", "munix" or, "micro unix" aims to be a micro kernel based operating system targeting the Raspberry Pi Pico.
