@@ -1,3 +1,5 @@
+if !NO_BOARD
+
 choice
     prompt "Board"
     default BOARD_PICO
@@ -6,3 +8,5 @@ source "src/board/pico/Kconfig"
 source "src/board/rpizero/Kconfig"
 
 endchoice
+
+endif

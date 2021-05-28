@@ -5,6 +5,10 @@ choice
 config ARM
     bool "ARM architecture"
 
+config X86_64
+    bool "x86_64 architecture"
+
 endchoice
 
 source "src/arch/arm/Kconfig"
+source "src/arch/x86_64/Kconfig"

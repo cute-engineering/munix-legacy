@@ -13,23 +13,21 @@ WARNINGS= \
 INCLUDES= \
 	-Isrc/
 
-TARGET = \
-	-march=armv6-m \
-	-mcpu=cortex-m0plus \
-	-mthumb
-
 CC?=gcc
 CXX?=g++
 
 CFLAGS += $(INCLUDES)
 CXXFLAGS += $(INCLUDES)
 
-TARGET_CC?=arm-none-eabi-gcc
-TARGET_LD?=arm-none-eabi-ld
+TARGET_CC?=$(CONFIG_TARGET_CC)
+TARGET_AS?=$(CONFIG_TARGET_AS)
+TARGET_LD?=$(CONFIG_TARGET_LD)
 
 SRCDIR=$(shell pwd)/src
 TOOLDIR=$(shell pwd)/tools
-BINDIR=$(shell pwd)/bin/$(CONFIG_TARGET_ARCH)/$(CONFIG_TARGET_BOARD)
+BINDIR=$(shell pwd)/bin/$(CONFIG_TARGET_ARCH)/$(or $(CONFIG_TARGET_BOARD), default)
+
+KERNEL_ELF=$(BINDIR)/kernel.elf
 
 include $(wildcard $(TOOLDIR)/.build.mk)
 
@@ -52,10 +50,19 @@ all:
 
 else
 
+-include $(shell echo src/arch/$(CONFIG_TARGET_ARCH)/.build.mk) # it's a bit hacky but yunno it's work
+-include $(shell echo src/arch/$(CONFIG_TARGET_ARCH)/$(CONFIG_TARGET_SOC)/.build.mk)
+
+ARCH_SRC=$(wildcard src/arch/$(CONFIG_TARGET_ARCH)/*.c src/arch/$(CONFIG_TARGET_ARCH)/*.s) \
+		$(wildcard src/arch/$(CONFIG_TARGET_ARCH)/$(CONFIG_TARGET_SOC)/*.c src/arch/$(CONFIG_TARGET_ARCH)/$(CONFIG_TARGET_SOC)/*.s)
+
+
 include $(wildcard src/*/.build.mk)
 
+TARGET ?= $(KERNEL_ELF)
+
 .PHONY: all
-all: $(KERNEL_UF2)
+all: $(TARGET)
 
 -include $(shell find bin/ -name '*.d')
 

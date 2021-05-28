@@ -5,6 +5,18 @@ config TARGET_ARCH
     string
     default "arm"
 
+config TARGET_CC
+    string
+    default "arm-none-eabi-gcc"
+
+config TARGET_AS
+    string
+    default "arm-none-eabi-as"
+
+config TARGET_LD
+    string
+    default "arm-none-eabi-ld"
+
 choice
     prompt "Target select"
     default ARCH_RP2040
