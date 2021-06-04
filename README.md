@@ -2,7 +2,7 @@
 </br>
 </br>
 <p align="center">
-<img height="128" src="brand/think-light.png"/>
+<img height="128" src="brand/color-light.png"/>
 </p>
 </br>
 </br>
