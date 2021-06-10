@@ -1,4 +1,0 @@
-#ifndef _MUNIX_LIBRARY_MEMORY_H
-#define _MUNIX_LIBRARY_MEMORY_H
-
-#endif /*!_MUNIX_LIBRARY_MEMORY_H */
